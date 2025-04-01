@@ -7,6 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { menuItems } from "./contants";
 
 const MenuButton = () => {
   return (
@@ -16,12 +17,11 @@ const MenuButton = () => {
           <Button>دکمه</Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-2">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
+          <DropdownMenuLabel className="text-right">هوره</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+          {menuItems.map((item, index) => (
+            <DropdownMenuItem key={index} className="justify-end">{item.name}</DropdownMenuItem>
+          ))}
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
