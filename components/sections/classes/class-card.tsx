@@ -1,24 +1,36 @@
 import Image from "next/image";
 import { ClassType } from "./constants";
+import { Badge } from "@/components/ui/badge";
 
 const ClassCard = ({
   name,
   description,
   image,
+  tags,
 }: //   tags,
 //   status,
 //   date,
 //   time,
 ClassType) => {
   return (
-    <div className="flex gap-2">
-      <div>
-        <Image src={image} alt={name} width={500} height={500} />
+    <div className="flex flex-col sm:flex-row gap-2 border rounded-xl overflow-hidden">
+      <div className="flex justify-center items-center">
+        <Image src={image} alt={name} width={400} height={400} />
       </div>
 
-      <div className="flex flex-col">
-        <h4 className="text-xl font-semibold">{name}</h4>
-        <h4 className="font-semibold">{description}</h4>
+      <div className="flex flex-col p-4 gap-1 justify-between">
+        <div>
+          <h4 className="text-xl font-semibold">{name}</h4>
+          <h4 className="lg:w-1/2 font-medium text-foreground/70">
+            {description}
+          </h4>
+        </div>
+
+        <div className="flex gap-1 mt-2">
+          {tags.map((i, index) => (
+            <Badge key={index} variant="secondary">{i}</Badge>
+          ))}
+        </div>
       </div>
     </div>
   );
