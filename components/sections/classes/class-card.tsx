@@ -21,7 +21,7 @@ ClassType) => {
       <div className="flex flex-col p-4 gap-1 justify-between">
         <div>
           <h4 className="text-xl font-semibold">{name}</h4>
-          <h4 className="lg:w-1/2 font-medium text-foreground/70">
+          <h4 className="lg:w-1/2 font-medium text-foreground/80">
             {description}
           </h4>
         </div>
