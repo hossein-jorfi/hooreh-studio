@@ -20,10 +20,10 @@ const MenuButton = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-2">
-          <DropdownMenuLabel className="text-right">هوره</DropdownMenuLabel>
+          <DropdownMenuLabel className="text-right font-bold">هوره</DropdownMenuLabel>
           <DropdownMenuSeparator />
           {menuItems.map((item, index) => (
-            <DropdownMenuItem key={index} className="justify-end">
+            <DropdownMenuItem key={index} className="justify-end font-bold">
               {item.name}
             </DropdownMenuItem>
           ))}
