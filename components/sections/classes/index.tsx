@@ -1,9 +1,9 @@
+import SectionWrapper from "@/components/shared/section-wrapper";
+
 const Classes = () => {
-      return (
-            <div className="">
-                  classes
-            </div>
-      );
+  return (
+    <SectionWrapper title="کلاس ها و ورکشاپ های هوره">test</SectionWrapper>
+  );
 };
 
 export default Classes;
