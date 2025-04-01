@@ -60,7 +60,7 @@ export function ImageSlider({
 
   return (
     <div
-      className="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg"
+      className="relative w-full max-w-3xl mx-auto overflow-hidden shadow-lg"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -111,7 +111,7 @@ export function ImageSlider({
       </Button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 bg-gray-200/20 backdrop-blur p-2 rounded-md">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 bg-gray-200/30 backdrop-blur-2xl p-2 rounded-md">
         {images.map((_, index) => (
           <button
             key={index}
