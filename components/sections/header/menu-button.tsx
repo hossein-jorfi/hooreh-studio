@@ -8,20 +8,24 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { menuItems } from "./contants";
-import { Bars3 } from "@/components/icons";
+import { Menu } from "lucide-react";
 
 const MenuButton = () => {
   return (
     <div className="sm:hidden">
       <DropdownMenu modal={false}>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon"><Bars3 /></Button>
+          <Button variant="ghost" size="icon">
+            <Menu className="size-6" />
+          </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-2">
           <DropdownMenuLabel className="text-right">هوره</DropdownMenuLabel>
           <DropdownMenuSeparator />
           {menuItems.map((item, index) => (
-            <DropdownMenuItem key={index} className="justify-end">{item.name}</DropdownMenuItem>
+            <DropdownMenuItem key={index} className="justify-end">
+              {item.name}
+            </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
