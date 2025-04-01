@@ -13,7 +13,7 @@ const ClassCard = ({
 //   time,
 ClassType) => {
   return (
-    <div className="flex flex-col sm:flex-row gap-2 border rounded-xl overflow-hidden">
+    <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted rounded-xl overflow-hidden">
       <div className="flex justify-center items-center">
         <Image src={image} alt={name} width={400} height={400} />
       </div>

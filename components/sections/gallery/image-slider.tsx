@@ -60,7 +60,7 @@ export function ImageSlider({
 
   return (
     <div
-      className="relative overflow-hidden shadow-lg"
+      className="relative overflow-hidden shadow-lg rounded-lg"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
