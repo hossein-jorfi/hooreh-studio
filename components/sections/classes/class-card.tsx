@@ -1,17 +1,17 @@
 import Image from "next/image";
 import { ClassType } from "./constants";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 const ClassCard = ({
   name,
   description,
   image,
   tags,
-}: //   tags,
-//   status,
-//   date,
-//   time,
-ClassType) => {
+  status,
+  date,
+  time,
+}: ClassType) => {
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted rounded-xl overflow-hidden">
       <div className="flex justify-center items-center">
@@ -26,11 +26,30 @@ ClassType) => {
           </h4>
         </div>
 
+        <div className="my-2">
+          {status === "open" ? (
+            <Badge className="!text-sm">
+              تاریخ برگذاری - {date} - ساعت {time}
+            </Badge>
+          ) : (
+            <Badge className="!text-sm" variant="destructive">
+              به اتمام رسیده است
+            </Badge>
+          )}
+        </div>
+
         <div className="flex gap-1 mt-2">
           {tags.map((i, index) => (
-            <Badge key={index} variant="secondary">{i}</Badge>
+            <Badge key={index} variant="secondary">
+              {i}
+            </Badge>
           ))}
         </div>
+        {status === "open" && (
+          <Button size="sm" variant="secondary" className="mt-3 lg:w-1/2 font-bold">
+            ثبت نام
+          </Button>
+        )}
       </div>
     </div>
   );

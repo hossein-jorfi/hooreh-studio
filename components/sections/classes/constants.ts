@@ -2,7 +2,7 @@ export interface ClassType {
   name: string;
   description: string;
   tags: string[];
-  status: string;
+  status: "open" | "closed";
   date?: string;
   time?: string;
   image: string;
