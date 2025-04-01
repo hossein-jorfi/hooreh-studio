@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const MenuButton = () => {
   return (
-    <div>
+    <div className="sm:hidden">
       <Button>دکمه</Button>
     </div>
   );

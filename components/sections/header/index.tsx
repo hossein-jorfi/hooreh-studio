@@ -3,7 +3,7 @@ import MenuButton from "./menu-button";
 const Header = () => {
   return (
     <div>
-      هدر
+      <div className="hidden sm:block"></div>
       <MenuButton />
     </div>
   );
