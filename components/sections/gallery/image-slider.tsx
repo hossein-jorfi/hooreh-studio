@@ -90,7 +90,7 @@ export function ImageSlider({
         className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full"
         onClick={() => {
           handleUserInteraction();
-          goToPrevious();
+          goToNext();
         }}
         aria-label="Previous image"
       >
@@ -103,7 +103,7 @@ export function ImageSlider({
         className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white/90 rounded-full"
         onClick={() => {
           handleUserInteraction();
-          goToNext();
+          goToPrevious();
         }}
         aria-label="Next image"
       >
@@ -111,7 +111,7 @@ export function ImageSlider({
       </Button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2 bg-gray-200/20 backdrop-blur p-2 rounded-md">
         {images.map((_, index) => (
           <button
             key={index}
