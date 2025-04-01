@@ -60,7 +60,7 @@ export function ImageSlider({
 
   return (
     <div
-      className="relative w-full max-w-3xl mx-auto overflow-hidden shadow-lg"
+      className="relative w-full  mx-auto overflow-hidden shadow-lg"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
