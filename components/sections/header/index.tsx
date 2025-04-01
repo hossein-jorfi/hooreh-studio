@@ -5,7 +5,7 @@ import MainLogo from "@/components/shared/main-logo";
 
 const Header = () => {
   return (
-    <div className="py-3 custom-container flex justify-between items-center bg-border">
+    <div className="py-3 custom-container flex justify-between items-center bg-border fixed">
       <div>
         <div className="hidden sm:block">
           {menuItems.map((item, index) => (
