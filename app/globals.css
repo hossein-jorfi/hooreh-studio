@@ -120,3 +120,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+@utility container {
+  margin-inline: auto;
+}
+
+@layer utilities {
+  .custom-container {
+    @apply px-2 sm:px-5 md:px-10 lg:px-16 xl:px-5 xl:container;
+  }
+}
