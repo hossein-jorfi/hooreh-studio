@@ -5,11 +5,11 @@ export const menuItems = [
   },
   {
     name: "کلاس ها و ورکشاپ ها",
-    id: "#",
+    id: "#classes",
   },
   {
     name: "سوالات متداول",
-    id: "#",
+    id: "#faq",
   },
   {
     name: "تماس با ما",

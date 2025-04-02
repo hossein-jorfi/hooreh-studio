@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import MenuButton from "./menu-button";
 import { menuItems } from "./contants";
 import MainLogo from "@/components/shared/main-logo";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -10,8 +11,8 @@ const Header = () => {
         <div>
           <div className="hidden sm:block">
             {menuItems.map((item, index) => (
-              <Button key={index} variant="ghost">
-                {item.name}
+              <Button key={index} variant="ghost" asChild>
+                <Link href={item.id}>{item.name}</Link>
               </Button>
             ))}
           </div>

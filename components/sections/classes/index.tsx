@@ -4,7 +4,7 @@ import ClassCard from "./class-card";
 
 const Classes = () => {
   return (
-    <SectionWrapper title="کلاس ها و ورکشاپ های هوره">
+    <SectionWrapper title="کلاس ها و ورکشاپ های هوره" id="classes">
       <div className="grid grid-cols-1 gap-5">
         {classes.map((item, index) => (
           <ClassCard key={index} {...item} />
