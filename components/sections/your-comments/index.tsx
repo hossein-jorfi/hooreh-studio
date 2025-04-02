@@ -5,61 +5,62 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 // Mock data for comments
 const comments = [
   {
-    id: 1,
-    author: "Alex Johnson",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "AJ",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "This is exactly what I was looking for! The documentation is so clear and helpful.",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
   {
-    id: 2,
-    author: "Sam Rivera",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "SR",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "I've been using this for my project and it's been a game changer. Highly recommend!",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
   {
-    id: 3,
-    author: "Taylor Kim",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "TK",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "The integration was seamless. I was able to get everything up and running in minutes.",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
   {
-    id: 4,
-    author: "Jordan Lee",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "JL",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "This solved a major pain point for our team. We're now able to move much faster.",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
   {
-    id: 5,
-    author: "Casey Morgan",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "CM",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "Great work! The attention to detail really shows. Looking forward to future updates.",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
   {
-    id: 6,
-    author: "Riley Patel",
-    avatar: "/placeholder.svg?height=40&width=40",
-    initials: "RP",
+    author: "نام کاربر",
+    initials: "نم",
     content:
-      "I've tried several similar solutions, but this one stands out for its simplicity and power.",
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
   },
+  {
+    author: "نام کاربر",
+    initials: "نم",
+    content:
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+  },
+  {
+    author: "نام کاربر",
+    initials: "نم",
+    content:
+      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
+  },
+  
 ];
 
 const YourComments = () => {
   const CommentCard = ({ comment }: { comment: (typeof comments)[0] }) => (
-    <Card className="h-full">
+    <Card className="h-full border-4">
       <CardHeader className="flex flex-row items-center gap-4 p-4">
         <Avatar>
-          <AvatarImage src={comment.avatar} alt={comment.author} />
+          <AvatarImage src={""} alt={comment.author} />
           <AvatarFallback>{comment.initials}</AvatarFallback>
         </Avatar>
         <div className="flex flex-col">
@@ -83,8 +84,8 @@ const YourComments = () => {
           // orientation="horizontal"
         >
           <div className="flex gap-4">
-            {comments.map((comment) => (
-              <div key={comment.id} className="w-[280px] flex-shrink-0">
+            {comments.map((comment, index) => (
+              <div key={index} className="w-[280px] flex-shrink-0">
                 <CommentCard comment={comment} />
               </div>
             ))}
@@ -94,8 +95,8 @@ const YourComments = () => {
 
       {/* Desktop view with grid layout */}
       <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {comments.map((comment) => (
-          <CommentCard key={comment.id} comment={comment} />
+        {comments.map((comment, index) => (
+          <CommentCard key={index} comment={comment} />
         ))}
       </div>
     </div>
