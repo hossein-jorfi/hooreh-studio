@@ -5,7 +5,7 @@ import MainLogo from "@/components/shared/main-logo";
 
 const Header = () => {
   return (
-    <div className="bg-secondary/20 backdrop-blur-3xl fixed top-0 w-full z-10 shadow">
+    <div className="bg-secondary/20 backdrop-blur-3xl fixed top-0 w-full z-10 border-b-4">
       <div className="w-full custom-container py-3 flex justify-between items-center">
         <div>
           <div className="hidden sm:block">
