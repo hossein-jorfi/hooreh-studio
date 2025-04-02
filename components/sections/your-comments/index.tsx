@@ -28,8 +28,8 @@ const YourComments = () => {
         ))}
       </div>
 
-      <div>
-        <Button variant="primary">شرکت در نظرسنجی</Button>
+      <div className="flex items-center justify-center mt-2">
+        <Button variant="primary" size="lg" className="font-bold">شرکت در نظرسنجی</Button>
       </div>
     </SectionWrapper>
   );
