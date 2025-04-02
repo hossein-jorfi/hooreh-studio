@@ -14,7 +14,7 @@ const CommentCard = ({ comment }: { comment: (typeof comments)[0] }) => (
       </div>
     </CardHeader>
     <CardContent className=" pt-0">
-      <p className="text-sm">{comment.content}</p>
+      <p className="text-sm font-medium">{comment.content}</p>
     </CardContent>
   </Card>
 );

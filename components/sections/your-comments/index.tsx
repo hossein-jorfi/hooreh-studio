@@ -9,12 +9,11 @@ const YourComments = () => {
       {/* Mobile view with horizontal scrolling */}
       <div className="md:hidden">
         <ScrollArea
-          className="w-full whitespace-nowrap pb-4"
-          // orientation="horizontal"
+          className="w-full"
         >
-          <div className="flex gap-4">
+          <div className="flex w-max space-x-4">
             {comments.map((comment, index) => (
-              <div key={index} className="w-[280px] flex-shrink-0">
+              <div key={index} className="w-[280px] shrink-0">
                 <CommentCard comment={comment} />
               </div>
             ))}
