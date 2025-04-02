@@ -1,82 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
-
-// Mock data for comments
-const comments = [
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  {
-    author: "نام کاربر",
-    initials: "نم",
-    content:
-      "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز",
-  },
-  
-];
+import { comments } from "./contants";
+import CommentCard from "./comment-card";
+import SectionWrapper from "@/components/shared/section-wrapper";
 
 const YourComments = () => {
-  const CommentCard = ({ comment }: { comment: (typeof comments)[0] }) => (
-    <Card className="h-full border-4">
-      <CardHeader className="flex flex-row items-center gap-4 p-4">
-        <Avatar>
-          <AvatarImage src={""} alt={comment.author} />
-          <AvatarFallback>{comment.initials}</AvatarFallback>
-        </Avatar>
-        <div className="flex flex-col">
-          <p className="font-medium">{comment.author}</p>
-        </div>
-      </CardHeader>
-      <CardContent className="p-4 pt-0">
-        <p className="text-sm">{comment.content}</p>
-      </CardContent>
-    </Card>
-  );
-
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-2xl font-bold mb-6">Comments</h2>
-
+    <SectionWrapper title="نظرات شما">
       {/* Mobile view with horizontal scrolling */}
       <div className="md:hidden">
         <ScrollArea
@@ -99,7 +28,7 @@ const YourComments = () => {
           <CommentCard key={index} comment={comment} />
         ))}
       </div>
-    </div>
+    </SectionWrapper>
   );
 };
 
