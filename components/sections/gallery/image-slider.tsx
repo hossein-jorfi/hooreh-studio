@@ -126,6 +126,8 @@ export function ImageSlider({
           />
         ))}
       </div>
+
+      <div className="absolute bottom-10" id="classes" />
     </div>
   );
 }
