@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { menuItems } from "./contants";
 import { Menu } from "lucide-react";
+import Link from "next/link";
 
 const MenuButton = () => {
   return (
@@ -20,11 +21,17 @@ const MenuButton = () => {
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent className="mr-2">
-          <DropdownMenuLabel className="text-right font-bold">هوره</DropdownMenuLabel>
+          <DropdownMenuLabel className="text-right font-bold">
+            هوره
+          </DropdownMenuLabel>
           <DropdownMenuSeparator />
           {menuItems.map((item, index) => (
-            <DropdownMenuItem key={index} className="justify-end font-bold">
-              {item.name}
+            <DropdownMenuItem
+              key={index}
+              className="justify-end font-bold"
+              asChild
+            >
+              <Link href={item.id}>{item.name}</Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuContent>
