@@ -1,4 +1,4 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { comments } from "./contants";
 import CommentCard from "./comment-card";
 import SectionWrapper from "@/components/shared/section-wrapper";
@@ -8,9 +8,7 @@ const YourComments = () => {
     <SectionWrapper title="نظرات شما">
       {/* Mobile view with horizontal scrolling */}
       <div className="md:hidden">
-        <ScrollArea
-          className="w-full"
-        >
+        <ScrollArea className="w-full">
           <div className="flex w-max space-x-4">
             {comments.map((comment, index) => (
               <div key={index} className="w-[280px] shrink-0">
@@ -18,6 +16,7 @@ const YourComments = () => {
               </div>
             ))}
           </div>
+          <ScrollBar orientation="horizontal" />
         </ScrollArea>
       </div>
 
