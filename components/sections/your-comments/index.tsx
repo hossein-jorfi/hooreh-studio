@@ -2,6 +2,7 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { comments } from "./contants";
 import CommentCard from "./comment-card";
 import SectionWrapper from "@/components/shared/section-wrapper";
+import { Button } from "@/components/ui/button";
 
 const YourComments = () => {
   return (
@@ -25,6 +26,10 @@ const YourComments = () => {
         {comments.map((comment, index) => (
           <CommentCard key={index} comment={comment} />
         ))}
+      </div>
+
+      <div>
+        <Button variant="primary">شرکت در نظرسنجی</Button>
       </div>
     </SectionWrapper>
   );

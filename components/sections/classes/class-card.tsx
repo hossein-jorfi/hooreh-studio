@@ -46,7 +46,7 @@ const ClassCard = ({
           ))}
         </div>
         {status === "open" && (
-          <Button size="sm" className="mt-3 lg:w-1/2 font-bold bg-[#1c1e11] text-white">
+          <Button variant="primary" size="sm" className="mt-3 lg:w-1/2 font-bold">
             ثبت نام
           </Button>
         )}
