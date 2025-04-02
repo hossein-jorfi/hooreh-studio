@@ -5,7 +5,7 @@ import YourComments from "@/components/sections/your-comments";
 
 export default function Home() {
   return (
-    <div className="flex flex-col gap-10 sm:gap-15 custom-container">
+    <div className="flex flex-col gap-10 sm:gap-15 custom-container pb-10">
       <Gallery />
       <Classes />
       <YourComments />
