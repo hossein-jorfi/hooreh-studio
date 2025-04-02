@@ -1,7 +1,7 @@
 export const menuItems = [
   {
     name: "خانه",
-    id: "#",
+    id: "#top",
   },
   {
     name: "کلاس ها و ورکشاپ ها",

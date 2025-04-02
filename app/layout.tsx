@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl">
       <body
         className={`${vazirmatn.className} ${vazirmatn.variable} antialiased`}
+        id="top"
       >
         <Header />
         {children}
