@@ -6,6 +6,7 @@ import Header from "@/components/sections/header";
 const vazirmatn = Vazirmatn({
   variable: "--font-vazirmatn",
   subsets: ["arabic"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body
-        className={`${vazirmatn.variable} antialiased`}
+        className={`${vazirmatn.className} ${vazirmatn.variable} antialiased`}
       >
         <Header />
         {children}
