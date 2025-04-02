@@ -1,4 +1,5 @@
 import Classes from "@/components/sections/classes";
+import Faq from "@/components/sections/faq";
 import Gallery from "@/components/sections/gallery";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="flex flex-col gap-10 sm:gap-15 custom-container">
       <Gallery />
       <Classes />
+      <Faq />
     </div>
   );
 }
