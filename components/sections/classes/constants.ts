@@ -6,6 +6,7 @@ export interface ClassType {
   status: "open" | "closed";
   image: string;
   note?: string
+  price: string
 }
 
 export const classes: ClassType[] = [
@@ -23,5 +24,6 @@ export const classes: ClassType[] = [
     ],
     note: "در این دوره به هر هنرجو ۵ کیلوگرم تعلق می‌گیرد برای ساخت و تمرین تکنیک‌ها",
     status: "open",
+    price: "۲,۸۰۰,۰۰۰ تومان",
   },
 ];

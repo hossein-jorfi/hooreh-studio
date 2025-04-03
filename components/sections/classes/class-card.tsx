@@ -12,6 +12,7 @@ const ClassCard = ({
   status,
   technics,
   note,
+  price,
 }: ClassType) => {
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted/60 rounded-xl overflow-hidden">
@@ -30,9 +31,7 @@ const ClassCard = ({
         {note && (
           <p className="text-black/70 flex items-start gap-1 font-medium text-sm">
             <BadgeCheck strokeWidth={2.3} className="size-6 sm:size-4" />
-            <span>
-              {note}
-            </span>
+            <span>{note}</span>
           </p>
         )}
 
@@ -74,9 +73,9 @@ const ClassCard = ({
           <Button
             variant="primary"
             size="sm"
-            className="mt-3 lg:w-1/2 font-bold"
+            className="mt-3 lg:w-1/2 font-bold !flex gap-2"
           >
-            ثبت نام
+            <span>{price}</span> <span>|</span> <span>ثبت نام</span>
           </Button>
         )}
       </div>
