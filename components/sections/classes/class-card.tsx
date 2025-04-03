@@ -9,8 +9,7 @@ const ClassCard = ({
   image,
   tags,
   status,
-  date,
-  time,
+  technics,
 }: ClassType) => {
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted/60 rounded-xl overflow-hidden">
@@ -26,12 +25,23 @@ const ClassCard = ({
           </h4>
         </div>
 
-        <div className="my-2">
-          {status === "open" ? (
-            <Badge className="!text-sm font-bold">
-              تاریخ برگذاری - {date} - ساعت {time}
-            </Badge>
-          ) : (
+        <div className="my-2 flex flex-col gap-1">
+          {technics && (
+            <>
+              <p className="text-sm font-bold">تکنیک های آموزشی:</p>
+              <div className="flex gap-1 flex-wrap">
+                {technics.map((item, index) => (
+                  <Badge key={index} className="!text-sm font-bold">
+                    {item}
+                  </Badge>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+
+        <div>
+          {status === "closed" && (
             <Badge className="!text-sm font-bold" variant="destructive">
               به اتمام رسیده است
             </Badge>
@@ -40,13 +50,21 @@ const ClassCard = ({
 
         <div className="flex gap-1 mt-2">
           {tags.map((i, index) => (
-            <Badge key={index} variant="secondary" className="text-white font-semibold">
+            <Badge
+              key={index}
+              variant="secondary"
+              className="text-white font-semibold"
+            >
               {i}
             </Badge>
           ))}
         </div>
         {status === "open" && (
-          <Button variant="primary" size="sm" className="mt-3 lg:w-1/2 font-bold">
+          <Button
+            variant="primary"
+            size="sm"
+            className="mt-3 lg:w-1/2 font-bold"
+          >
             ثبت نام
           </Button>
         )}
