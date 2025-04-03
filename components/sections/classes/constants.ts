@@ -11,7 +11,7 @@ export interface ClassType {
 
 export const classes: ClassType[] = [
   {
-    image: "/images/test.jpeg",
+    image: "/images/classes/hand.jpg",
     name: "کلاس سفالگری کار با دست مقدماتی",
     description:
       "در این کلاس شما تکنیک‌های اولیه سفالگری با دست را یاد گرفته و هر جلسه یک حجم با این تکنیک‌ها می‌سازید. این دوره نیاز به هیچ پیش زمینه‌ای ندارد و اگر دنبال یک هنر برای آرامش ذهن و افکارتون هستید این کلاس مناسب شماست.",
