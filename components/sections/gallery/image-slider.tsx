@@ -11,11 +11,7 @@ interface ImageSliderProps {
 }
 
 const images = [
-  "/images/test.jpeg",
-  "/images/test.jpeg",
-  "/images/test.jpeg",
-  "/images/test.jpeg",
-  "/images/test.jpeg",
+  "/images/slider.jpg",
 ];
 
 export function ImageSlider({
@@ -65,7 +61,7 @@ export function ImageSlider({
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Image container */}
-      <div className="relative h-64 sm:h-80 md:h-96">
+      <div className="relative h-80 sm:h-80 md:h-96">
         {images.map((image, index) => (
           <div
             key={index}
