@@ -13,8 +13,8 @@ export const socialItems = [
         />
       </svg>
     ),
-    text: "telegram",
-    link: "@Hoorehstudio",
+    text: "t.me/hoorehstudio",
+    link: "https://t.me/hoorehstudio",
   },
   {
     icon: (
@@ -30,8 +30,8 @@ export const socialItems = [
         />
       </svg>
     ),
-    text: "instagram",
-    link: "",
+    text: "hoorehstudio@",
+    link: "https://www.instagram.com/hoorehstudio",
   },
   {
     icon: (
@@ -47,7 +47,7 @@ export const socialItems = [
         />
       </svg>
     ),
-    text: "phone",
-    link: "",
+    text: "0901-274-2138",
+    link: "tel:09012742138",
   },
 ];
