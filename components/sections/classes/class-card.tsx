@@ -3,6 +3,7 @@ import { ClassType } from "./constants";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck } from "lucide-react";
+import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 const ClassCard = ({
   name,
@@ -17,7 +18,11 @@ const ClassCard = ({
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted/60 rounded-xl overflow-hidden">
       <div className="flex justify-center items-center">
-        <Image src={image} alt={name} width={400} height={400} />
+        <div className="w-full sm:w-[250px]">
+          <AspectRatio ratio={1 / 1}>
+            <Image src={image} alt={name} fill className="object-cover" />
+          </AspectRatio>
+        </div>
       </div>
 
       <div className="flex flex-col p-4 gap-3 justify-between">
