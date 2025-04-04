@@ -9,7 +9,7 @@ import { faqItems } from "./contants";
 
 const Faq = () => {
   return (
-    <SectionWrapper title="سوالات متداول" id="faq">
+    <SectionWrapper title="سوالات متداول">
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item, index) => (
           <AccordionItem key={index} value={String(index)}>

@@ -28,8 +28,9 @@ const YourComments = () => {
         ))}
       </div>
 
-      <div className="flex items-center justify-center mt-2">
+      <div className="flex items-center justify-center mt-2 relative">
         <Button variant="primary" size="lg" className="font-bold">شرکت در نظرسنجی</Button>
+        <div className="absolute bottom-10" id="faq" />
       </div>
     </SectionWrapper>
   );
