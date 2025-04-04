@@ -14,7 +14,7 @@ export const socialItems = [
       </svg>
     ),
     text: "telegram",
-    link: "",
+    link: "@Hoorehstudio",
   },
   {
     icon: (
