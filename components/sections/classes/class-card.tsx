@@ -18,11 +18,17 @@ const ClassCard = ({
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted/60 rounded-xl overflow-hidden">
       <div className="flex justify-center items-center">
-        <div className="w-full sm:w-[250px]">
-          <AspectRatio ratio={1 / 1}>
-            <Image src={image} alt={name} fill className="object-cover" />
-          </AspectRatio>
-        </div>
+        {image ? (
+          <div className="w-full sm:w-[250px]">
+            <AspectRatio ratio={1 / 1}>
+              <Image src={image} alt={name} fill className="object-cover" />
+            </AspectRatio>
+          </div>
+        ) : (
+          <div className="p-5 w-fit sm:w-[250px] flex justify-center items-center">
+            <Image src="/images/logo.png" alt="logo" width={100} height={0} />
+          </div>
+        )}
       </div>
 
       <div className="flex flex-col p-4 gap-3 justify-between">
