@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Vazirmatn } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/sections/header";
+import Footer from "@/components/sections/footer";
 
 const vazirmatn = Vazirmatn({
   variable: "--font-vazirmatn",
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -13,6 +13,6 @@ export const menuItems = [
   },
   {
     name: "تماس با ما",
-    id: "#",
+    id: "#contact",
   },
 ];
