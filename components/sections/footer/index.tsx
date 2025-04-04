@@ -11,10 +11,12 @@ const Footer = () => {
             برای ثبت نام میتوانید یکی از راه های ارتباطی زیر را انتخاب کنید
           </p>
         </div>
-        <div className="flex flex-col gap-2 mt-4">
-          {socialItems.map((item, index) => (
-            <SocialMediaItem key={index} {...item} />
-          ))}
+        <div className="flex justify-center items-center">
+          <div className="flex flex-col gap-2 mt-4 items-end">
+            {socialItems.map((item, index) => (
+              <SocialMediaItem key={index} {...item} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
