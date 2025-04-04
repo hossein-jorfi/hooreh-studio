@@ -1,3 +1,6 @@
+import { socialItems } from "./contants";
+import SocialMediaItem from "./social-media-item";
+
 const Footer = () => {
   return (
     <div id="contact" className="pattern custom-container p-5">
@@ -7,6 +10,11 @@ const Footer = () => {
           <p className="font-bold text-foreground/80 text-xs">
             برای ثبت نام میتوانید یکی از راه های ارتباطی زیر را انتخاب کنید
           </p>
+        </div>
+        <div className="flex flex-col gap-2 mt-4">
+          {socialItems.map((item, index) => (
+            <SocialMediaItem key={index} {...item} />
+          ))}
         </div>
       </div>
     </div>
