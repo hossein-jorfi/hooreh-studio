@@ -14,6 +14,7 @@ const ClassCard = ({
   technics,
   note,
   price,
+  items,
 }: ClassType) => {
   return (
     <div className="flex flex-col sm:flex-row gap-2 border-4 bg-muted/60 rounded-xl overflow-hidden">
@@ -32,11 +33,14 @@ const ClassCard = ({
       </div>
 
       <div className="flex flex-col p-4 gap-3 justify-between">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 lg:w-1/2">
           <h4 className="text-xl font-semibold">{name}</h4>
-          <h4 className="lg:w-1/2 font-medium text-foreground/90">
+          <h4 className="font-medium text-foreground/90">
             {description}
           </h4>
+          <div className="font-medium text-foreground/90">
+            {items && items.map((item, index) => <p key={index}>- {item}</p>)}
+          </div>
         </div>
 
         {note && (
