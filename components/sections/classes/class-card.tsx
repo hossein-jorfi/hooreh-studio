@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BadgeCheck } from "lucide-react";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import Link from "next/link";
 
 const ClassCard = ({
   name,
@@ -35,9 +36,7 @@ const ClassCard = ({
       <div className="flex flex-col p-4 gap-3 justify-between">
         <div className="flex flex-col gap-1 lg:w-1/2">
           <h4 className="text-xl font-semibold">{name}</h4>
-          <h4 className="font-medium text-foreground/90">
-            {description}
-          </h4>
+          <h4 className="font-medium text-foreground/90">{description}</h4>
           <div className="font-medium text-foreground/90">
             {items && items.map((item, index) => <p key={index}>- {item}</p>)}
           </div>
@@ -91,8 +90,11 @@ const ClassCard = ({
             variant="primary"
             size="sm"
             className="mt-3 lg:w-1/2 font-bold !flex gap-2"
+            asChild
           >
-            <span>{price}</span> <span>|</span> <span>ثبت نام</span>
+            <Link href="#contact">
+              <span>{price}</span> <span>|</span> <span>ثبت نام</span>
+            </Link>
           </Button>
         )}
       </div>

@@ -4,7 +4,7 @@ import SocialMediaItem from "./social-media-item";
 const Footer = () => {
   return (
     <div className="pattern">
-      <div id="contact" className="custom-container p-5">
+      <div id="contact" className="custom-container p-5 sm:!w-fit">
         <div className="w-full border-black/30 border-2 p-5 bg-secondary/20 backdrop-blur-xs rounded-2xl">
           <div className="flex flex-col gap-1">
             <h4 className="text-xl font-bold">تماس با ما</h4>
