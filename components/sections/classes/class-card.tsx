@@ -30,8 +30,10 @@ const ClassCard = ({
 
         {note && (
           <p className="text-black/70 flex items-start gap-1 font-medium text-sm">
-            <BadgeCheck strokeWidth={2.3} className="size-6 sm:size-4" />
-            <span>{note}</span>
+            <span className="size-4">
+              <BadgeCheck strokeWidth={2.3} className="size-4" />
+            </span>
+            <span className="text-wrap">{note}</span>
           </p>
         )}
 
